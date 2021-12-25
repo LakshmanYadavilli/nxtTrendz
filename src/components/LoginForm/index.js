@@ -30,7 +30,7 @@ class LoginForm extends Component {
     }
 
     const response = await fetch(url, options)
-    const data = response.json()
+    const data = await response.json()
 
     if (response.ok === true) {
       this.success()
