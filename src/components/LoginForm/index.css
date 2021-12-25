@@ -1,0 +1,38 @@
+/* Write your CSS code here */
+.formContainer > img {
+  width: 200px;
+  height: 100px;
+  align-self: center;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: grey 20px;
+  padding: 40px;
+  width: 400px;
+}
+.loginForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e6f6ff;
+  height: 100vh;
+}
+.loginForm > img {
+  width: 400px;
+  height: 400px;
+}
+form > button {
+  width: 180px;
+  background-color: blue;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+form > input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

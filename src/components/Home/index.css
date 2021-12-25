@@ -1,0 +1,11 @@
+/* Write your CSS code here */
+.home {
+  display: flex;
+  flex-direction: column;
+}
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

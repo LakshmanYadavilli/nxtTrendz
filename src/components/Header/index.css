@@ -1,0 +1,24 @@
+/* Write your CSS code here */
+.headerLogo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerLogo > img {
+  width: 300px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header > button {
+  width: 100px;
+  height: 50px;
+}
+.HomeI {
+  margin-right: 10px;
+}
+.header > h1 {
+  margin-right: 10px;
+}
