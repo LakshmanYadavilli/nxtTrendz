@@ -4,7 +4,7 @@ import './index.css'
 
 class LoginForm extends Component {
   state = {
-    userName: '',
+    username: '',
     password: '',
     error: false,
     msg: '',
@@ -21,8 +21,9 @@ class LoginForm extends Component {
 
   check = async event => {
     event.preventDefault()
-    const {userName, password} = this.state
-    const details = {userName, password}
+    const {username, password} = this.state
+    console.log(`UserName:${username},password: ${password}`)
+    const details = {username, password}
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -31,6 +32,7 @@ class LoginForm extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(response)
 
     if (response.ok === true) {
       this.success()
@@ -40,7 +42,7 @@ class LoginForm extends Component {
   }
 
   userName = event => {
-    this.setState({userName: event.target.value})
+    this.setState({username: event.target.value})
   }
 
   password = event => {
@@ -48,7 +50,7 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {error, msg, userName, password} = this.state
+    const {error, msg, username, password} = this.state
     return (
       <div className="loginForm">
         <img
@@ -68,7 +70,7 @@ class LoginForm extends Component {
               placeholder="UserName"
               type="text"
               onChange={this.userName}
-              value={userName}
+              value={username}
             />
             <br />
             <label htmlFor="password">PASSWORD</label>
@@ -82,7 +84,7 @@ class LoginForm extends Component {
             />
             {error && <p>{msg}</p>}
             <br />
-            <button type="button">Login</button>
+            <button type="submit">Login</button>
           </form>
         </div>
       </div>
